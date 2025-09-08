@@ -273,7 +273,9 @@ body {
 }
 
 .modal-body {
-    padding: 30px;
+    padding: 5px;
+    width: 100%;
+    height: auto;
 }
 
 .biodata-grid {
@@ -319,37 +321,23 @@ body {
     font-size: 1rem;
 }
 
-.download-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin-top: 20px;
-}
-
 .download-btn {
-    padding: 12px 20px;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    color: white;
     border: none;
-    border-radius: 8px;
-    font-size: 1rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
+    margin-top: 25px;
     transition: all 0.3s ease;
-    text-align: center;
-}
-
-.download-btn.txt {
-    background: linear-gradient(135deg, #3498db, #2980b9);
-    color: white;
-}
-
-.download-btn.pdf {
-    background: linear-gradient(135deg, #e74c3c, #c0392b);
-    color: white;
 }
 
 .download-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 20px rgba(39, 174, 96, 0.4);
 }
 
 .no-results {
@@ -390,4 +378,9 @@ body {
         grid-template-columns: 1fr;
         gap: 5px;
     }
+}
+
+html {
+    width: 100%;
+    height: auto;
 }
