@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Pegawai - Kecamatan Medan Perjuangan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Data Pegawai</h1>
+            <p>Kecamatan Medan Perjuangan</p>
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn asn active" onclick="filterEmployees('all')">Semua</button>
+            <button class="filter-btn asn" onclick="filterEmployees('ASN')">ASN</button>
+            <button class="filter-btn honorer" onclick="filterEmployees('Honorer')">Honorer</button>
+            <button class="filter-btn kepling" onclick="filterEmployees('Kepling')">Kepling</button>
+        </div>
+
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" class="search-input" id="searchInput" placeholder="Cari berdasarkan nama atau NIP...">
+                <button class="search-btn" onclick="searchEmployees()">Cari</button>
+            </div>
+        </div>
+
+        <div class="employees-grid" id="employeesGrid">
+            <!-- Employee cards will be populated by JavaScript/PHP -->
+        </div>
+    </div>
+
+    <!-- Modal for employee details -->
+    <div id="employeeModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Detail Biodata Pegawai</h2>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="biodata-grid">
+                    <img id="modalPhoto" class="modal-photo" src="" alt="Foto Pegawai">
+                    <div class="biodata-info">
+                        <div class="info-item">
+                            <span class="info-label">Nama:</span>
+                            <span class="info-value" id="modalName"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">NIP:</span>
+                            <span class="info-value" id="modalNip"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Jabatan:</span>
+                            <span class="info-value" id="modalJabatan"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Status:</span>
+                            <span class="info-value" id="modalStatus"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Jenis Kelamin:</span>
+                            <span class="info-value" id="modalGender"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Tanggal Lahir:</span>
+                            <span class="info-value" id="modalBirth"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Alamat:</span>
+                            <span class="info-value" id="modalAddress"></span>
+                        </div>
+                    </div>
+                </div>
+                <button class="download-btn" onclick="downloadData()">📄 Unduh Data Pegawai</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
